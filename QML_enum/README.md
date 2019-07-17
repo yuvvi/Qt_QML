@@ -1,3 +1,4 @@
+# Import enumeration in QML from Qt
 Enumerations cannot be created in QML upto Qt5.5.
 Here there is implementation to export enums from Qt to QML
 1. In mycolor.h 
