@@ -11,3 +11,7 @@
 
 - Functions used in QML need to be given as Q_INVOKABLE
 > Q_INVOKABLE void print_operation();
+
+## Export class as Object
+> ApplicationLayer *al_obj = new ApplicationLayer;
+> engine.rootContext()->setContextProperty("appObj",al_obj);
