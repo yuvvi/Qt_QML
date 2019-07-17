@@ -7,11 +7,11 @@ Window {
     visible: true
     width: 640
     height: 480
-    title: qsTr("Hello World")
+    title: qsTr("Import Qt class & object")
     Applyr_comp{
         id: applObj
         onPrintCountChanged: {
-            console.log("onPrintcountChanged :: ",pCount,m_printCount)
+            console.log("onPrintcountChanged :: ",pCount,printCountQML)
         }
     }
 
@@ -20,9 +20,9 @@ Window {
         /*Class is imported*/
         applObj.print_operation()
         applObj.pCount = 2
-        applObj.m_printCount = 4
+        applObj.printCountQML = 4
         /*Object is imported*/
-        appObj.m_printCount = 5
+        appObj.printCountQML = 5
         console.log("main.qml #Component.onCompleted#END")
     }
 }
