@@ -8,3 +8,6 @@
  arg4: component name to be used in QML)
 ```
  > qmlRegisterType<ApplicationLayer>("ApplnLayer",1,0,"Applyr_comp");
+
+- Functions used in QML need to be given as Q_INVOKABLE
+> Q_INVOKABLE void print_operation();
