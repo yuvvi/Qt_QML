@@ -1,1 +1,1 @@
-Signal & slot communication in javaScript file
+Signal & slot communication in javaScript file (networkComm.js)
