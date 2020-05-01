@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>netwrk2.qml</file>
+        <file>networkComm.js</file>
+    </qresource>
+</RCC>
