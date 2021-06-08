@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>bv.rc</file>
+        <file>Resources/bv.rc</file>
+    </qresource>
+</RCC>

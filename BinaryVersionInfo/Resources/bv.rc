@@ -1,0 +1,70 @@
+#if defined(_WIN32) || defined(_WIN64)
+#include "winres.h"
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+//
+#undef  VI_EXTERNAL
+#define _QUOTE(x) #x
+#define STRINGIZE(y) _QUOTE(y)
+
+#define VI_INTERNAL 10,01,02
+#define VI_EXTERNAL "10,01,02,"
+#define COMPONENT_NAME "executableName.exe\0"
+#define VI_COMPANYNAME "MY COMPANY, Inc.\0"
+#define VI_FILEVERSION VI_EXTERNAL
+#define VI_LEGALCOPYRIGHT "Copyright (C) 2021 MY COMPANY, Inc.\0"
+#define VI_PRODUCTNAME "Product name \0"
+#define VI_PRODUCTVERSION VI_EXTERNAL
+
+
+#undef SUPPORTED_LANGUAGES
+#define SUPPORTED_LANGUAGES 0x409, 1252
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION VI_INTERNAL
+PRODUCTVERSION VI_INTERNAL
+FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+FILEFLAGS 0x1L
+#else
+FILEFLAGS 0x0L
+#endif
+FILEOS 0x4L
+FILETYPE 0x2L
+FILESUBTYPE 0x0L
+BEGIN
+BLOCK "StringFileInfo"
+BEGIN
+BLOCK "040904e4"
+BEGIN
+VALUE "CompanyName", VI_COMPANYNAME
+VALUE "FileDescription", "application description\0"
+VALUE "FileVersion", VI_FILEVERSION
+VALUE "InternalName", COMPONENT_NAME
+VALUE "LegalCopyright", VI_LEGALCOPYRIGHT
+VALUE "OriginalFilename", COMPONENT_NAME
+VALUE "ProductName", VI_PRODUCTNAME
+VALUE "ProductVersion", VI_PRODUCTVERSION
+END
+END
+BLOCK "VarFileInfo"
+BEGIN
+VALUE "Translation", SUPPORTED_LANGUAGES
+ 
+END
+END
+#endif    // !_MAC
+
+#endif /*defined(_WIN32) || defined(_WIN64)*/
+
+
+
+
+
